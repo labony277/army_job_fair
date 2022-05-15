@@ -150,6 +150,13 @@ nav,
 section {
     display: block;
 }
+/* blog css */
+
+article {
+    background-color: aqua;
+    border-radius: 118px;
+    padding: 28px !important;
+}
 
 body {
     line-height: 1;
