@@ -750,389 +750,970 @@
                 </div>
                 <div class="card">
                   <div class="card-header pb-0">
-                    <h5>Edges input style</h5>
+                    <h5>Education</h5>
                   </div>
                   <form class="form theme-form">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col">
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlInput5">Email address</label>
-                            <input class="form-control btn-pill" id="exampleFormControlInput5" type="email" placeholder="name@example.com">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     Masters</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Department</th>
+                                              
+                                              <th>Result</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_course[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_dep[]"
+                                                          class="form-control"></td>
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_result[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+                  </div>
+                  <!-- 2 -->
+                  <div class="row"
+                  x-data="handler()">
+                  <div class="col">
+                      <div class="mb-3">
+                          <div
+                              class="form-group">
+                              <label
+                                  class="control-label
+                                  required">
+                                 Army Staff Course</label>
+                              <table
+                                  class="table
+                                  table-bordered
+                                  align-items-center
+                                  table-sm">
+                                  <thead
+                                      class="thead-light">
+                                      <tr>
+                                          <th>Ser</th>
+                                          <th>Course Name</th>
+                                          <th>Institute</th>
+                                          
+                                          <th>Year</th>
+                                          <th>Remove</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <template
+                                          x-for="(field,
+                                          index)
+                                          in
+                                          fields"
+                                          :key="index">
+                                          <tr>
+                                              <td
+                                                  x-text="index
+                                                  +
+                                                  1"></td>
+                                              <td><input
+                                                      x-model="field.txt1"
+                                                      type="text"
+                                                      name="spouse_up_course2[]"
+                                                      class="form-control"></td>
+                                              <td><input
+                                                      x-model="field.txt2"
+                                                      type="text"
+                                                      name="spouse_up_ins[]"
+                                                      class="form-control"></td>
+                                             
+                                              <td><input
+                                                      x-model="field.txt5"
+                                                      type="text"
+                                                      name="spouse_up_year[]"
+                                                      class="form-control"></td>
+                                              <td><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-danger
+                                                      btn-small"
+                                                      @click="removeField(index)">&times;</button></td>
+                                          </tr>
+                                      </template>
+                                  </tbody>
+                                  <tfoot>
+                                      <tr>
+                                          <td
+                                              colspan="4"
+                                              class="text-right"><button
+                                                  type="button"
+                                                  class="btn
+                                                  btn-info"
+                                                  @click="addNewField()">+
+                                                  Add</button></td>
+                                      </tr>
+                                  </tfoot>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- 3 -->
+              <div class="row"
+              x-data="handler()">
+              <div class="col">
+                  <div class="mb-3">
+                      <div
+                          class="form-group">
+                          <label
+                              class="control-label
+                              required">
+                             Diploma</label>
+                          <table
+                              class="table
+                              table-bordered
+                              align-items-center
+                              table-sm">
+                              <thead
+                                  class="thead-light">
+                                  <tr>
+                                      <th>Ser</th>
+                                      <th>Course Name</th>
+                                      <th>Institute</th>
+                                      
+                                      <th>Year</th>
+                                      <th>Remove</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <template
+                                      x-for="(field,
+                                      index)
+                                      in
+                                      fields"
+                                      :key="index">
+                                      <tr>
+                                          <td
+                                              x-text="index
+                                              +
+                                              1"></td>
+                                          <td><input
+                                                  x-model="field.txt1"
+                                                  type="text"
+                                                  name="spouse_up_course3[]"
+                                                  class="form-control"></td>
+                                          <td><input
+                                                  x-model="field.txt2"
+                                                  type="text"
+                                                  name="spouse_up_insdip[]"
+                                                  class="form-control"></td>
+                                         
+                                          <td><input
+                                                  x-model="field.txt5"
+                                                  type="text"
+                                                  name="spouse_up_yeardip[]"
+                                                  class="form-control"></td>
+                                          <td><button
+                                                  type="button"
+                                                  class="btn
+                                                  btn-danger
+                                                  btn-small"
+                                                  @click="removeField(index)">&times;</button></td>
+                                      </tr>
+                                  </template>
+                              </tbody>
+                              <tfoot>
+                                  <tr>
+                                      <td
+                                          colspan="4"
+                                          class="text-right"><button
+                                              type="button"
+                                              class="btn
+                                              btn-info"
+                                              @click="addNewField()">+
+                                              Add</button></td>
+                                  </tr>
+                              </tfoot>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- 4 -->
+          <div class="row"
+          x-data="handler()">
+          <div class="col">
+              <div class="mb-3">
+                  <div
+                      class="form-group">
+                      <label
+                          class="control-label
+                          required">
+                         Graduation</label>
+                      <table
+                          class="table
+                          table-bordered
+                          align-items-center
+                          table-sm">
+                          <thead
+                              class="thead-light">
+                              <tr>
+                                  <th>Ser</th>
+                                  <th> Department</th>
+                                  <th>Institute</th>
+                                  
+                                  <th>Year</th>
+                                  <th>Remove</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <template
+                                  x-for="(field,
+                                  index)
+                                  in
+                                  fields"
+                                  :key="index">
+                                  <tr>
+                                      <td
+                                          x-text="index
+                                          +
+                                          1"></td>
+                                      <td><input
+                                              x-model="field.txt1"
+                                              type="text"
+                                              name="spouse_up_course4[]"
+                                              class="form-control"></td>
+                                      <td><input
+                                              x-model="field.txt2"
+                                              type="text"
+                                              name="spouse_up_insgra[]"
+                                              class="form-control"></td>
+                                     
+                                      <td><input
+                                              x-model="field.txt5"
+                                              type="text"
+                                              name="spouse_up_yeargra[]"
+                                              class="form-control"></td>
+                                      <td><button
+                                              type="button"
+                                              class="btn
+                                              btn-danger
+                                              btn-small"
+                                              @click="removeField(index)">&times;</button></td>
+                                  </tr>
+                              </template>
+                          </tbody>
+                          <tfoot>
+                              <tr>
+                                  <td
+                                      colspan="4"
+                                      class="text-right"><button
+                                          type="button"
+                                          class="btn
+                                          btn-info"
+                                          @click="addNewField()">+
+                                          Add</button></td>
+                              </tr>
+                          </tfoot>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+                      <!-- 5 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword6">Password</label>
-                            <input class="form-control btn-pill" id="exampleInputPassword6" type="password" placeholder="Password">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     College And School</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Result</th>
+                                              
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_course5[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_ins5[]"
+                                                          class="form-control"></td>
+                                                          <td><input
+                                                            x-model="field.txt5"
+                                                            type="text"
+                                                            name="spouse_up_result5[]"
+                                                            class="form-control"></td>
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_year5[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect7">Example select</label>
-                            <select class="form-select btn-pill digits" id="exampleFormControlSelect7">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect8">Example multiple select</label>
-                            <select class="form-select btn-pill p-l-45 digits" id="exampleFormControlSelect8" multiple="">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div>
-                            <label class="form-label" for="exampleFormControlTextarea9">Example textarea</label>
-                            <textarea class="form-control btn-pill" id="exampleFormControlTextarea9" rows="3"></textarea>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
+                      <!-- end -->
                     </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
+                   
                   </form>
                 </div>
+                <!-- end education -->
                 <div class="card">
                   <div class="card-header pb-0">
-                    <h5>Flat input style</h5>
+                    <h5>Professional Courses</h5>
                   </div>
                   <form class="form theme-form">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col">
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlInput10">Email address</label>
-                            <input class="form-control btn-square" id="exampleFormControlInput10" type="email" placeholder="name@example.com">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     UN Courses</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_courseun[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_insun[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearun[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+                  </div>
+                      <!-- end 1 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword11">Password</label>
-                            <input class="form-control btn-square" id="exampleInputPassword11" type="password" placeholder="Password">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     Military Public Affairs</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_coursemil[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_insmil[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearmil[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+                  </div>
+                      <!-- end 2 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect12">Example select</label>
-                            <select class="form-select btn-square digits" id="exampleFormControlSelect12">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     Combating Terrorism</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_coursecom[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_inscom[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearcom[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+                  </div>
+                      <!-- end 3 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
                           <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect13">Example multiple select</label>
-                            <select class="form-select btn-square digits" id="exampleFormControlSelect13" multiple="">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     UK Joint info Activities Course</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_courseuk[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_insuk[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearuk[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
-                          <div>
-                            <label class="form-label" for="exampleFormControlTextarea14">Example textarea</label>
-                            <textarea class="form-control btn-square" id="exampleFormControlTextarea14" rows="3"></textarea>
+                  </div>
+                      <!-- end 4 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
+                          <div class="mb-3">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     Military Professional Courses</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_coursecm[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_inscm[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearcm[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
                           </div>
-                        </div>
                       </div>
+                  </div>
+                      <!-- end 5 -->
+                      <div class="row"
+                      x-data="handler()">
+                      <div class="col">
+                          <div class="mb-3">
+                              <div
+                                  class="form-group">
+                                  <label
+                                      class="control-label
+                                      required">
+                                     PRINCE Foundation</label>
+                                  <table
+                                      class="table
+                                      table-bordered
+                                      align-items-center
+                                      table-sm">
+                                      <thead
+                                          class="thead-light">
+                                          <tr>
+                                              <th>Ser</th>
+                                              <th>Course Name</th>
+                                              <th>Institute</th>
+                                              <th>Year</th>
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <template
+                                              x-for="(field,
+                                              index)
+                                              in
+                                              fields"
+                                              :key="index">
+                                              <tr>
+                                                  <td
+                                                      x-text="index
+                                                      +
+                                                      1"></td>
+                                                  <td><input
+                                                          x-model="field.txt1"
+                                                          type="text"
+                                                          name="spouse_up_coursepri[]"
+                                                          class="form-control"></td>
+                                                  <td><input
+                                                          x-model="field.txt2"
+                                                          type="text"
+                                                          name="spouse_up_inspri[]"
+                                                          class="form-control"></td>
+                                                        
+                                                 
+                                                  <td><input
+                                                          x-model="field.txt5"
+                                                          type="text"
+                                                          name="spouse_up_yearpri[]"
+                                                          class="form-control"></td>
+                                                  <td><button
+                                                          type="button"
+                                                          class="btn
+                                                          btn-danger
+                                                          btn-small"
+                                                          @click="removeField(index)">&times;</button></td>
+                                              </tr>
+                                          </template>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td
+                                                  colspan="4"
+                                                  class="text-right"><button
+                                                      type="button"
+                                                      class="btn
+                                                      btn-info"
+                                                      @click="addNewField()">+
+                                                      Add</button></td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                      <!-- end 6 -->
                     </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
+                    
                   </form>
                 </div>
+                <!-- start skilled -->
                 <div class="card">
                   <div class="card-header pb-0">
-                    <h5>Raise input style</h5>
+                    <h5>Skilled Areas of Interest</h5>
                   </div>
                   <form class="form theme-form">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlInput15">Email address</label>
-                            <input class="form-control input-air-primary" id="exampleFormControlInput15" type="email" placeholder="name@example.com">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword16">Password</label>
-                            <input class="form-control input-air-primary" id="exampleInputPassword16" type="password" placeholder="Password">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect17">Example select</label>
-                            <select class="form-select input-air-primary digits" id="exampleFormControlSelect17">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect18">Example multiple select</label>
-                            <select class="form-select input-air-primary digits" id="exampleFormControlSelect18" multiple="">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                     
+                   
+                    
                       <div class="row">
                         <div class="col">
                           <div>
-                            <label class="form-label" for="exampleFormControlTextarea19">Example textarea</label>
+                            <label class="form-label" for="exampleFormControlTextarea19"></label>
                             <textarea class="form-control input-air-primary" id="exampleFormControlTextarea19" rows="3"></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
+                   
                   </form>
                 </div>
+                <!-- end skilled -->
                 <div class="card">
                   <div class="card-header pb-0">
-                    <h5>Solid input style</h5>
+                    <h5>Reference</h5>
                   </div>
                   <form class="form theme-form">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlInput20">Email address</label>
-                            <input class="form-control" id="exampleFormControlInput20" type="email" placeholder="name@example.com">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword21">Password</label>
-                            <input class="form-control" id="exampleInputPassword21" type="password" placeholder="Password">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword22">Disabled</label>
-                            <input class="form-control" id="exampleInputPassword22" type="text" disabled="" placeholder="Disabled">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect23">Example select</label>
-                            <select class="form-select digits" id="exampleFormControlSelect23">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect24">Example multiple select</label>
-                            <select class="form-select digits" id="exampleFormControlSelect24" multiple="">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                     
+                    
+                     
+                     
                       <div class="row">
                         <div class="col">
                           <div>
-                            <label class="form-label" for="exampleFormControlTextarea25">Example textarea</label>
+                            <label class="form-label" for="exampleFormControlTextarea25"></label>
                             <textarea class="form-control" id="exampleFormControlTextarea25" rows="3"></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
+                   
                   </form>
                 </div>
-                <div class="card">
-                  <div class="card-header pb-0">
-                    <h5>Input sizing</h5>
-                  </div>
-                  <form class="form theme-form">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="colFormLabelSm26">Large input</label>
-                            <input class="form-control form-control-lg" id="colFormLabelSm26" type="text" placeholder="col-form-label-lg">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleInputPassword27">Default input</label>
-                            <input class="form-control" id="exampleInputPassword27" type="text" placeholder="form-control">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="colFormLabelSm28">Small input</label>
-                            <input class="form-control form-control-sm" id="colFormLabelSm28" type="text" placeholder="col-form-label-sm">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect29">Large select</label>
-                            <select class="form-select form-control-lg digits" id="exampleFormControlSelect29">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label" for="exampleFormControlSelect30">Default select</label>
-                            <select class="form-select digits" id="exampleFormControlSelect30">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div>
-                            <label class="form-label" for="exampleFormControlSelect31">Small select</label>
-                            <select class="form-select form-control-sm digits" id="exampleFormControlSelect31">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
-                  </form>
-                </div>
-                <div class="card">
-                  <div class="card-header pb-0">
-                    <h5>Custom controls</h5>
-                  </div>
-                  <form class="form theme-form">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <div class="mb-3 row">
-                            <label class="col-sm-3 col-form-label">Upload File</label>
-                            <div class="col-sm-9">
-                              <input class="form-control" type="file">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="row">
-                            <label class="col-sm-3 col-form-label">Custom select</label>
-                            <div class="col-sm-9">
-                              <select class="custom-select form-select">
-                                <option selected="">Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
-                  </form>
-                </div>
+                <!-- end -->
+               
+                
               </div>
             </div>
           </div>
@@ -1171,6 +1752,38 @@
     <script src="../assets/js/theme-customizer/customizer.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
+     <!-- Plugin used-->
+     <script
+     src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+ <script>
+     //FOR RADIO
+     $('input[type="radio"]').click(function(){
+            if($(this).attr("value")=="ABC"){
+                $(".Box").hide('slow');
+            }
+            if($(this).attr("value")=="PQR"){
+                $(".Box").show('slow');
+
+            }        
+        });
+        $('input[type="radio"]').trigger('click');
+
+        //FOR dynamic
+        function handler() {
+            return {
+                fields: [],
+                addNewField() {
+                    this.fields.push({
+                        txt1: '',
+                        txt2: ''
+                    });
+                },
+                removeField(index) {
+                    this.fields.splice(index, 1);
+                }
+                }
+        }
+    </script>
   </body>
 
 <!-- Mirrored from admin.pixelstrap.com/viho/theme/base-input.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Sep 2021 04:39:14 GMT -->
