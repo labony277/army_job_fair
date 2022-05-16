@@ -423,7 +423,7 @@ jQuery(function ($) {
   wowAnimation()
 
   //16. countdown one
-  $('#clock').countdown('2022/01/30', function (event) {
+  $('#clock').countdown('2022/5/24', function (event) {
     $(this).html(event.strftime('' +
       '<div class="row">' +
       '<div class="col">' +
@@ -452,7 +452,7 @@ jQuery(function ($) {
                 minute = second * 60,
                 hour = minute * 60,
                 day = hour * 24,
-                set_time = "December 30, 2022 00:00:00";
+                set_time = "May 24, 2022 00:00:00";
 
             var countDown = new Date(set_time).getTime();
             var x = setInterval(function() {
