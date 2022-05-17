@@ -1574,7 +1574,7 @@ select.form-control.has-value {
     left: 0;
 }
 .free-trial-image img {
-    display: none;
+    /* display: none; */
 }
 
 .free-trial-content {
